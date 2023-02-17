@@ -8,6 +8,11 @@ const setQuery= (e) => {
         getResult(searchBar.value)
 }
 
+document.getElementById('enter').addEventListener('click',()=>{
+    console.log("clicked");
+    return getResult(searchBar.value);
+})
+
 const getResult= (cityName) => {
     let query=`${url}weather?q=${cityName}&appid=${key}&units=metric&lang=tr`
     fetch(query)
@@ -31,13 +36,12 @@ const displayResult = (result) => {
     let minmax = document.querySelector('.minmax')
     minmax.innerText = `${Math.round(result.main.temp_min)}°C/
     ${Math.round(result.main.temp_max)}°C`
+    infoTxt.innerText ="";
 }
 
 
 const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keypress', setQuery)
-
-
 
 
 document.getElementById('konum').addEventListener('click',()=>{
@@ -46,7 +50,7 @@ document.getElementById('konum').addEventListener('click',()=>{
         navigator.geolocation.getCurrentPosition(onSuccess, onError)
     }else{
         console.log("Tarayıcınız geolocation'ı desteklemiyor...")
-    }
+    } 
 })
 
 function fetchData(){

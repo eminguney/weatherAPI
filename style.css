@@ -19,6 +19,7 @@ body{
 }
 
 .header{
+    margin-top: 70px;
     padding: 50px 20px 30px 20px;
 }
 
@@ -66,3 +67,15 @@ body{
     font-size: 24px;
     text-shadow: 1px 3px rgba(0, 0, 0, 0.8);
 }
+
+.button {
+    background-color: #fbb034;
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 3px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
