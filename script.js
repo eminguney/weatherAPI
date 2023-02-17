@@ -1,4 +1,4 @@
-const url='http://api.openweathermap.org/data/2.5/';
+const url='https://api.openweathermap.org/data/2.5/';
 const key= 'beffb96027d5fa2fc75446706367684e';
 const country= 'TR';
 
